@@ -6,11 +6,9 @@ import RightSidebar from './components/RightSidebar/RightSidebar';
 function App() {
   return (
     <div className={styles.app}>
-      <div className={styles.appGlass}>
-        <LeftSidebar />
-        <Main />
-        <RightSidebar />
-      </div>
+      <LeftSidebar />
+      <Main />
+      <RightSidebar />
     </div>
   );
 }

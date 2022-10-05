@@ -1,42 +1,39 @@
 // Sidebar imports
-import {
-  UilEstate,
-  UilClipboardAlt,
-  UilUsersAlt,
-  UilPackage,
-  UilChart,
-  UilSignOutAlt,
-} from '@iconscout/react-unicons';
+// import {
+//   UilEstate,
+//   UilClipboardAlt,
+//   UilUsersAlt,
+//   UilPackage,
+//   UilChart,
+//   UilSignOutAlt,
+// } from '@iconscout/react-unicons';
 
 // Analytics Cards imports
-import { UilUsdSquare, UilMoneyWithdrawal } from '@iconscout/react-unicons';
+// import { UilUsdSquare, UilMoneyWithdrawal } from '@iconscout/react-unicons';
 
 // Recent Card Imports
 // import img1 from '../imgs/img1.png';
 // import img2 from '../imgs/img2.png';
 // import img3 from '../imgs/img3.png';
 
+export type LeftSidebarType = {
+  icon: String;
+  heading: String;
+};
+
 // Sidebar Data
-export const SidebarData = [
+export const leftSidebarData = [
   {
-    icon: UilEstate,
-    heading: 'Dashboard',
+    icon: 'Grid',
   },
   {
-    icon: UilClipboardAlt,
-    heading: 'Orders',
+    icon: 'File',
   },
   {
-    icon: UilUsersAlt,
-    heading: 'Customers',
+    icon: 'Signal',
   },
   {
-    icon: UilPackage,
-    heading: 'Products',
-  },
-  {
-    icon: UilChart,
-    heading: 'Analytics',
+    icon: 'Wallet',
   },
 ];
 
@@ -50,7 +47,7 @@ export const cardsData = [
     },
     barValue: 70,
     value: '25,970',
-    png: UilUsdSquare,
+    // png: UilUsdSquare,
     series: [
       {
         name: 'Sales',
@@ -66,7 +63,7 @@ export const cardsData = [
     },
     barValue: 80,
     value: '14,270',
-    png: UilMoneyWithdrawal,
+    // png: UilMoneyWithdrawal,
     series: [
       {
         name: 'Revenue',
@@ -83,7 +80,7 @@ export const cardsData = [
     },
     barValue: 60,
     value: '4,270',
-    png: UilClipboardAlt,
+    // png: UilClipboardAlt,
     series: [
       {
         name: 'Expenses',
