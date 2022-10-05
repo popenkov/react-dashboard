@@ -15,7 +15,7 @@ const data = {
     },
 
     fill: {
-      colors: ['#fff', 'rgba(52, 80, 177, 0.1)'],
+      colors: ['#fff', 'rgba(52, 80, 177, 0.1)', 'rgba(52, 80, 177, 0.05)'],
       type: 'gradient',
     },
     dataLabels: {
@@ -58,7 +58,9 @@ function Report() {
   return (
     <div className={styles.report}>
       <h3>Analitcs Report</h3>
-      <Chart options={data.options} series={data.series} type="area" />
+      <div className={styles.table}>
+        <Chart options={data.options} series={data.series} type="area" />
+      </div>
     </div>
   );
 }

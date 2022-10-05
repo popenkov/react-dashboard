@@ -3,6 +3,7 @@ import styles from './Main.module.scss';
 import MainHeader from '../MainHeader/MainHeader';
 import Summary from '../Summary/Summary';
 import Report from '../Report/Report';
+import BankAccount from '../BankAccount/BankAccount';
 
 function Main() {
   return (
@@ -14,7 +15,9 @@ function Main() {
 
           <Report />
         </div>
-        <div className={styles.right}></div>
+        <div className={styles.right}>
+          <BankAccount />
+        </div>
       </div>
       Main
     </div>
