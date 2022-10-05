@@ -1,0 +1,56 @@
+.summary {
+  width: 100%;
+  max-width: 920px;
+  display: flex;
+  margin: -10px;
+}
+
+.item {
+  width: calc(100% / 4 - 10px);
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  padding: 20px 25px;
+  background: var(--greyBackground);
+
+  box-shadow: 4px 4px 20px -10px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+
+.title {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+
+  letter-spacing: -0.02em;
+
+  color: var(--white);
+}
+
+.amount {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 24px;
+  color: var(--white);
+}
+
+.percent {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 13px;
+
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.percentValue {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--lightGreyFontColor);
+}

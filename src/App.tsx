@@ -8,7 +8,7 @@ function App() {
     <div className={styles.app}>
       <LeftSidebar />
       <Main />
-      <RightSidebar />
+      {/* <RightSidebar /> */}
     </div>
   );
 }
