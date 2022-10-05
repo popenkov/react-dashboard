@@ -4,10 +4,11 @@
   min-height: 100vh;
   font-family: 'Inter', sans-serif;
 
-  display: grid;
+  // display: grid;
+  display: flex;
 
   background: var(--lightBlackBackground);
   gap: 16px;
-  grid-template-columns: 90px auto;
+  // grid-template-columns: 90px auto;
   overflow: hidden;
 }

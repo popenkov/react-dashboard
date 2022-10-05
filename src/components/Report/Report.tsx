@@ -2,15 +2,9 @@ import styles from './Report.module.scss';
 import Chart from 'react-apexcharts';
 
 const data = {
-  series: [
-    {
-      name: 'Analitcs Report',
-      data: [78, 50, 30, 90, 40, 120, 100],
-    },
-  ],
   options: {
     chart: {
-      type: 'area',
+      type: '"area"',
       height: 'auto',
     },
 
@@ -52,6 +46,12 @@ const data = {
       show: false,
     },
   },
+  series: [
+    {
+      name: 'Analitcs Report',
+      data: [78, 50, 30, 90, 40, 120, 100],
+    },
+  ],
 };
 
 function Report() {
@@ -59,7 +59,7 @@ function Report() {
     <div className={styles.report}>
       <h3>Analitcs Report</h3>
       <div className={styles.table}>
-        <Chart options={data.options} series={data.series} type="area" />
+        <Chart series={data.series} options={data.options} type="area" />
       </div>
     </div>
   );

@@ -8,9 +8,22 @@ function BankCard({
   amount,
   backgroundColor,
 }: BankCardType) {
+  console.log(backgroundColor);
   return (
     <div className={styles.card} style={{ background: backgroundColor }}>
-      BankCard
+      <div className={styles.header}>
+        <p className={styles.title}>{title}</p>
+      </div>
+      <div className={styles.container}>
+        <div className={styles.transactions}>
+          <p className={styles.subtitle}>Transaction</p>
+          <p className={styles.value}>{transactions}</p>
+        </div>
+        <div className={styles.amount}>
+          <p className={styles.subtitle}>Amount</p>
+          <p className={styles.value}>{amount}</p>
+        </div>
+      </div>
     </div>
   );
 }

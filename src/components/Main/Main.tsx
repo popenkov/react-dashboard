@@ -4,6 +4,7 @@ import MainHeader from '../MainHeader/MainHeader';
 import Summary from '../Summary/Summary';
 import Report from '../Report/Report';
 import BankAccount from '../BankAccount/BankAccount';
+import Target from '../Target/Target';
 
 function Main() {
   return (
@@ -17,6 +18,7 @@ function Main() {
         </div>
         <div className={styles.right}>
           <BankAccount />
+          <Target />
         </div>
       </div>
       Main
