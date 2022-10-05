@@ -2,6 +2,7 @@ import styles from './Main.module.scss';
 
 import MainHeader from '../MainHeader/MainHeader';
 import Summary from '../Summary/Summary';
+import Report from '../Report/Report';
 
 function Main() {
   return (
@@ -11,9 +12,7 @@ function Main() {
         <div className={styles.center}>
           <Summary />
 
-          <div className={styles.report}>
-            <h3>Analitcs Report</h3>
-          </div>
+          <Report />
         </div>
         <div className={styles.right}></div>
       </div>
