@@ -39,7 +39,7 @@ const LeftSidebar = () => {
     <>
       <div
         className={styles.bars}
-        style={expanded ? { left: '60%' } : { left: '5%' }}
+        style={expanded ? { left: '50%' } : { left: '5%' }}
         onClick={() => setExpaned(!expanded)}
       >
         <Menu />
@@ -65,6 +65,7 @@ const LeftSidebar = () => {
                   onClick={() => setSelected(index)}
                 >
                   <Icon />
+                  <span className={styles.text}>{item.heading}</span>
                 </div>
               );
             })}
@@ -73,9 +74,11 @@ const LeftSidebar = () => {
           <div className={styles.settingsMenu}>
             <div className={styles.menuItem}>
               <Settings />
+              <span className={styles.text}>Settings</span>
             </div>
             <div className={styles.menuItem}>
               <Logout />
+              <span className={styles.text}>Login</span>
             </div>
           </div>
         </div>

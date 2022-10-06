@@ -18,8 +18,8 @@
 }
 
 .title {
-  font-family: 'DM Sans';
-  font-style: normal;
+  margin-bottom: 20px;
+
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
@@ -30,8 +30,8 @@
 }
 
 .amount {
-  font-family: 'DM Sans';
-  font-style: normal;
+  margin-bottom: 18px;
+
   font-weight: 700;
   font-size: 28px;
   line-height: 24px;
@@ -39,6 +39,7 @@
 }
 
 .percent {
+  margin-bottom: 8px;
   font-weight: 400;
   font-size: 10px;
   line-height: 13px;

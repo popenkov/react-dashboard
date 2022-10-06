@@ -1,4 +1,22 @@
+.report {
+  margin-top: 40px;
+  position: relative;
+}
+
+.title {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 31px;
+  letter-spacing: -0.02em;
+
+  color: #ffffff;
+}
+
 .table {
   padding: 20px;
   background: #1c1d24;
+  border: 1px solid rgba(109, 125, 147, 0.15);
+  box-shadow: 4px 4px 20px -10px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
 }

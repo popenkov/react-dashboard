@@ -1,0 +1,92 @@
+.filter {
+  z-index: 12;
+  position: absolute;
+  top: 70px;
+  left: 20px;
+
+  :global(.filter-select__control) {
+    width: 200px;
+    min-height: 32px;
+    padding: 8px 20px;
+    background: #0d0d0d;
+    border: 0.5px solid rgba(109, 125, 147, 0.15);
+    border-radius: 6px;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    /* identical to box height */
+
+    color: #6d7d93;
+  }
+
+  :global(.filter-select__input-container) {
+    margin: 0;
+    padding: 0;
+  }
+  :global(.filter-select__control) {
+    padding: 0 10px;
+  }
+  :global(.filter-select__value-container) {
+    color: #ffffff;
+    padding: 0;
+  }
+
+  :global(.filter-select__single-value) {
+    margin-right: 5px;
+    color: #ffffff;
+  }
+
+  :global(.filter-select__indicator) {
+    color: #ffffff;
+  }
+  :global(.filter-select__indicator-separator) {
+    display: none;
+  }
+  :global(.filter-select__indicator) {
+    width: 10px;
+    padding: 2px;
+    &:hover {
+      color: hsl(0, 0%, 80%);
+    }
+  }
+
+  :global(.filter-select__control--menu-is-open .filter-select__indicator) {
+    transform: rotate(180deg);
+  }
+  :global(.filter-select__menu) {
+    z-index: 12;
+    width: 200px;
+    background: #0d0d0d;
+    color: #61646b;
+  }
+  :global(.filter-select__option--is-selected) {
+    background: #3c343f !important;
+    color: #ffffff !important;
+  }
+  :global(.filter-select__option--is-focused) {
+    background: #d5d7dd;
+    color: #61646b;
+    cursor: pointer;
+  }
+
+  .dropdownArrow {
+    width: 4px;
+    height: 8px;
+    padding: 5px;
+    color: white;
+    fill: white;
+    // background-image: url('/src/assets/svg/chevron-down.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    &Up {
+      transform: rotate(180deg);
+    }
+  }
+}

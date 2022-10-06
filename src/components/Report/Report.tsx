@@ -1,5 +1,26 @@
 import styles from './Report.module.scss';
 import Chart from 'react-apexcharts';
+import { useState, createContext, useEffect } from 'react';
+import ReportFilters from '../ReportFilters/ReportFilters';
+
+const monthData = [78, 50, 30, 90, 40, 120, 100];
+const yearData = Array.from({ length: 40 }, () =>
+  Math.floor(Math.random() * 40)
+);
+
+const monthSeries = [
+  {
+    name: 'Analitcs Report',
+    data: [78, 50, 30, 90, 40, 120, 100],
+  },
+];
+
+const yearSeries = [
+  {
+    name: 'Analitcs Report',
+    data: [100, 78, 50, 120, 30, 90, 40],
+  },
+];
 
 const data = {
   options: {
@@ -54,14 +75,54 @@ const data = {
   ],
 };
 
+export type ReportContextType = {
+  activeSort: string;
+  setActiveSort: React.Dispatch<React.SetStateAction<string | undefined>>;
+};
+
+export const ReportContext = createContext<ReportContextType | null>(null);
+
 function Report() {
+  const [activeSort, setActiveSort] = useState<string | undefined>('month');
+  const [series, setSeries] = useState(data.series);
+  const [options, setOptions] = useState(data.options);
+
+  const initialContext: ReportContextType = {
+    activeSort: 'month',
+    setActiveSort,
+  };
+  useEffect(() => {
+    switch (activeSort) {
+      case 'month':
+        // data.series[0].data = monthData;
+        // setSeries(...series, (series[0].data = monthData));
+        // setSeries((prev) => ({ ...prev, data: monthData }));
+        setSeries((prev) => (prev = monthSeries));
+        break;
+      case 'year':
+        // data.series[0].data = yearData;
+        // setSeries(...series, (series[0].data = yearData));
+        // setSeries((prev) => ({ ...prev, data: yearData }));
+        setSeries((prev) => (prev = yearSeries));
+        break;
+    }
+    // console.log(activeSort, series);
+  }, [activeSort]);
+
+  useEffect(() => {
+    console.log(activeSort, series);
+  }, [series]);
+
   return (
-    <div className={styles.report}>
-      <h3>Analitcs Report</h3>
-      <div className={styles.table}>
-        <Chart series={data.series} options={data.options} type="area" />
+    <ReportContext.Provider value={initialContext}>
+      <div className={styles.report}>
+        <h3 className={styles.title}>Analitcs Report</h3>
+        <ReportFilters />
+        <div className={styles.table}>
+          <Chart series={series} options={options} type="area" />
+        </div>
       </div>
-    </div>
+    </ReportContext.Provider>
   );
 }
 

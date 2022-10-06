@@ -11,10 +11,35 @@
   top: 0;
   bottom: 20px;
   height: calc(100vh - 80px);
+
+  @media screen and (max-width: 768px) {
+    position: fixed;
+    z-index: 15;
+
+    width: 60%;
+    min-width: 320px;
+    align-items: flex-start;
+    padding: 40px;
+    height: 100%;
+    background: #1c1d24;
+    box-shadow: 4px 4px 20px -10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+  }
 }
 
 .bars {
   display: none;
+  @media screen and (max-width: 768px) {
+    display: flex;
+    position: fixed;
+    top: 2rem;
+    left: 60%;
+    left: 50%;
+    background: #ffe0e0;
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 16;
+  }
 }
 
 .logo {
@@ -35,9 +60,15 @@
 .settingsMenu {
   display: flex;
   flex-direction: column;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
 }
 
 .menuItem {
+  display: flex;
+  align-items: center;
   margin-bottom: 48px;
   cursor: pointer;
   color: #d1d1d1;
@@ -54,5 +85,19 @@
   &.active {
     color: #3557c3;
     opacity: 1;
+  }
+}
+
+.text {
+  display: none;
+
+  @media screen and (max-width: 768px) {
+    display: block;
+    margin-left: 20px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+    color: #6d7d93;
   }
 }
