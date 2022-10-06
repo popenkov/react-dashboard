@@ -20,8 +20,8 @@ function BankCard({
           <p className={styles.value}>{transactions}</p>
         </div>
         <div className={styles.amount}>
-          <p className={styles.subtitle}>Amount</p>
-          <p className={styles.value}>{amount}</p>
+          <p className={styles.subtitle}>Total balance</p>
+          <p className={styles.value}>$ {amount}</p>
         </div>
       </div>
     </div>

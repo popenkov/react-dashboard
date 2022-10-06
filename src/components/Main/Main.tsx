@@ -21,7 +21,6 @@ function Main() {
           <Target />
         </div>
       </div>
-      Main
     </div>
   );
 }
