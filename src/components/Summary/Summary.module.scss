@@ -3,6 +3,14 @@
   // max-width: 920px;
   display: flex;
   margin: -10px;
+
+  @media screen and (max-width: 768px) {
+    flex-wrap: wrap;
+  }
+
+  @media screen and (max-width: 500px) {
+    margin: 0;
+  }
 }
 
 .item {
@@ -15,6 +23,14 @@
 
   box-shadow: 4px 4px 20px -10px rgba(0, 0, 0, 0.1);
   border-radius: 12px;
+
+  @media screen and (max-width: 768px) {
+    width: calc(100% / 2 - 20px);
+  }
+  @media screen and (max-width: 500px) {
+    width: 100%;
+    margin: 10px 0;
+  }
 }
 
 .title {

@@ -4,19 +4,36 @@
   margin: 0 auto;
   padding: 40px;
   padding-left: 100px;
+
+  @media screen and (max-width: 768px) {
+    padding: 20px;
+  }
 }
 
 .mainContainer {
   display: flex;
   justify-content: space-between;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 }
 
 .center {
   width: calc(100% - 345px);
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    margin-bottom: 40px;
+  }
 }
 
 .right {
   // width: 100%;
   // width: calc(300 / 1340 * 100%);
   width: 300px;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
 }

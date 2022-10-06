@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import clsx from 'clsx';
 
 //user export
-import { leftSidebarData, LeftSidebarType } from '../../data/data';
+import { leftSidebarData } from '../../data/data';
 import { ReactComponent as Logo } from '../../assets/svg/logo.svg';
 import { ReactComponent as Menu } from '../../assets/svg/hamburger.svg';
 import { ReactComponent as File } from '../../assets/svg/file.svg';
