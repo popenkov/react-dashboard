@@ -15,8 +15,10 @@
   @media screen and (max-width: 768px) {
     position: fixed;
     z-index: 15;
+    height: auto;
 
     width: 60%;
+    width: 320px;
 
     align-items: flex-start;
     padding: 40px;
@@ -30,11 +32,13 @@
 .bars {
   display: none;
   @media screen and (max-width: 768px) {
+    cursor: pointer;
     display: flex;
     position: fixed;
     top: 2rem;
     left: 60%;
     left: 50%;
+    left: 270px;
     background: #6d7d93;
     padding: 10px;
     border-radius: 10px;
@@ -60,6 +64,7 @@
 .settingsMenu {
   display: flex;
   flex-direction: column;
+  margin-top: 40px;
 
   @media screen and (max-width: 768px) {
     width: 100%;

@@ -28,14 +28,14 @@ const LeftSidebar = () => {
   const isAdaptive = useMediaQuery('(max-width: 992px)');
   const [selected, setSelected] = useState(0);
 
-  const [expanded, setExpaned] = useState(true);
+  const [expanded, setExpaned] = useState(false);
 
   const sidebarVariants = {
     true: {
       left: '0',
     },
     false: {
-      left: '-60%',
+      left: '-320px',
     },
   };
 
@@ -47,7 +47,7 @@ const LeftSidebar = () => {
     <>
       <div
         className={styles.bars}
-        style={expanded ? { left: '50%' } : { left: '5%' }}
+        style={expanded ? { left: '270px' } : { left: '5%' }}
         onClick={() => setExpaned(!expanded)}
       >
         <Menu />
