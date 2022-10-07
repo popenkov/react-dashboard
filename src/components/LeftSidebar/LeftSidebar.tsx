@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import clsx from 'clsx';
+import { Link } from 'react-router-dom';
 
 //user export
 import { leftSidebarData } from '../../data/data';
@@ -13,6 +14,7 @@ import { ReactComponent as Wallet } from '../../assets/svg/wallet.svg';
 import { ReactComponent as Settings } from '../../assets/svg/settings.svg';
 import { ReactComponent as Logout } from '../../assets/svg/logout.svg';
 import styles from './LeftSidebar.module.scss';
+import { typeImplementation } from '@testing-library/user-event/dist/type/typeImplementation';
 
 const iconsByAlias: any = {
   File: File,
@@ -57,7 +59,8 @@ const LeftSidebar = () => {
             {leftSidebarData.map((item, index) => {
               const Icon: React.FunctionComponent = iconsByAlias[item.icon];
               return (
-                <div
+                <Link
+                  to={item.link}
                   className={clsx(styles.menuItem, {
                     [styles.active]: selected === index,
                   })}
@@ -66,7 +69,7 @@ const LeftSidebar = () => {
                 >
                   <Icon />
                   <span className={styles.text}>{item.heading}</span>
-                </div>
+                </Link>
               );
             })}
           </nav>

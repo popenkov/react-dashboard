@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState, useRef } from 'react';
 import styles from './TargetItem.module.scss';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
@@ -6,6 +6,7 @@ import { motion, AnimateSharedLayout } from 'framer-motion';
 import Chart from 'react-apexcharts';
 import { TargetItemType } from '../../data/data';
 import { ReactComponent as Shevron } from '../../assets/svg/chevron-down.svg';
+import { ReactComponent as CloseIcon } from '../../assets/svg/cross.svg';
 
 // parent Card
 
@@ -129,14 +130,20 @@ function ExpandedCard({ param, setExpanded }: CardType) {
 
   return (
     <motion.div className={styles.ExpandedCard} layoutId="expandableCard">
-      <div style={{ alignSelf: 'flex-end', cursor: 'pointer', color: 'white' }}>
-        <button onClick={setExpanded}> Expand </button>
+      <div className={styles.ExpandedCardContent}>
+        <div
+          style={{ alignSelf: 'flex-end', cursor: 'pointer', color: 'white' }}
+        >
+          <button onClick={setExpanded} className={styles.closeBtn}>
+            <CloseIcon />
+          </button>
+        </div>
+        <span>{param.title}</span>
+        <div className={styles.chartContainer}>
+          <Chart options={data.options} series={param.series} type="area" />
+        </div>
+        <span>{param.term}</span>
       </div>
-      <span>{param.title}</span>
-      <div className={styles.chartContainer}>
-        <Chart options={data.options} series={param.series} type="area" />
-      </div>
-      <span>Last 24 hours</span>
     </motion.div>
   );
 }

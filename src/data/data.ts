@@ -19,6 +19,7 @@
 export type LeftSidebarType = {
   icon: string;
   heading: string;
+  link: string;
 };
 
 // Sidebar Data
@@ -26,18 +27,22 @@ export const leftSidebarData = [
   {
     icon: 'Grid',
     heading: 'Summary',
+    link: '/',
   },
   {
     icon: 'File',
-    heading: 'Reports ',
+    heading: 'Reports',
+    link: '/reports',
   },
   {
     icon: 'Signal',
-    heading: 'Graphics',
+    heading: 'Tables',
+    link: '/tables',
   },
   {
     icon: 'Wallet',
     heading: 'My wallet',
+    link: '/wallet',
   },
 ];
 
