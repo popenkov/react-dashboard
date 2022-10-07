@@ -31,7 +31,7 @@ type SeriesItemType = {
 };
 
 type DataApexType = {
-  options: ApexOptions;
+  options: ApexOptions | any;
   series?: SeriesItemType[];
 };
 

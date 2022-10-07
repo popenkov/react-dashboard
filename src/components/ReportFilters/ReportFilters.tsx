@@ -38,7 +38,8 @@ function ReportFilters() {
   const { activeSort, setActiveSort } = useContext<any>(ReportContext);
   console.log(activeSort, setActiveSort);
 
-  const handleChange = (option: ValueType<OptionType>): void => {
+  //: ValueType<OptionType>
+  const handleChange = (option: any): void => {
     setCurrentSort(option);
     setActiveSort(option.value);
     // setActiveSort(option.value);
