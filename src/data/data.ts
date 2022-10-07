@@ -54,15 +54,15 @@ type TargetColorType = {
   backgroundColor: string;
 };
 type TargetSeriesType = {
-  backGround: string;
-  boxShadow: string;
+  name: string;
+  data: number[];
 };
 export type TargetItemType = {
   title: string;
   color: TargetColorType;
   barValue: number;
   term: string;
-  series: TargetSeriesType;
+  series: TargetSeriesType[];
 };
 
 // Analytics Cards Data

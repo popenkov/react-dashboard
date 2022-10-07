@@ -1,6 +1,9 @@
 import styles from './Report.module.scss';
-import Chart from 'react-apexcharts';
+// import Chart from 'react-apexcharts';
+import ReactApexChart from 'react-apexcharts';
+import { ApexOptions } from 'apexcharts';
 import { useState, createContext, useEffect } from 'react';
+
 import ReportFilters from '../ReportFilters/ReportFilters';
 
 const monthData = [78, 50, 30, 90, 40, 120, 100];
@@ -22,10 +25,20 @@ const yearSeries = [
   },
 ];
 
-const data = {
+type SeriesItemType = {
+  name: string;
+  data: number[];
+};
+
+type DataApexType = {
+  options: ApexOptions;
+  series?: SeriesItemType[];
+};
+
+const data: DataApexType = {
   options: {
     chart: {
-      type: '"area"',
+      type: 'area',
       height: 'auto',
     },
 
@@ -94,19 +107,12 @@ function Report() {
   useEffect(() => {
     switch (activeSort) {
       case 'month':
-        // data.series[0].data = monthData;
-        // setSeries(...series, (series[0].data = monthData));
-        // setSeries((prev) => ({ ...prev, data: monthData }));
-        setSeries((prev) => (prev = monthSeries));
+        setSeries((prev: any) => (prev = monthSeries));
         break;
       case 'year':
-        // data.series[0].data = yearData;
-        // setSeries(...series, (series[0].data = yearData));
-        // setSeries((prev) => ({ ...prev, data: yearData }));
-        setSeries((prev) => (prev = yearSeries));
+        setSeries((prev: any) => (prev = yearSeries));
         break;
     }
-    // console.log(activeSort, series);
   }, [activeSort]);
 
   useEffect(() => {
@@ -119,7 +125,7 @@ function Report() {
         <h3 className={styles.title}>Analitcs Report</h3>
         <ReportFilters />
         <div className={styles.table}>
-          <Chart series={series} options={options} type="area" />
+          <ReactApexChart series={series} options={options} type="area" />
         </div>
       </div>
     </ReportContext.Provider>

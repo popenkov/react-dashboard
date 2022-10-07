@@ -3,7 +3,9 @@ import styles from './TargetItem.module.scss';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import { motion, AnimateSharedLayout } from 'framer-motion';
-import Chart from 'react-apexcharts';
+// import Chart from 'react-apexcharts';
+import ReactApexChart from 'react-apexcharts';
+import { ApexOptions } from 'apexcharts';
 import { TargetItemType } from '../../data/data';
 import { ReactComponent as Shevron } from '../../assets/svg/chevron-down.svg';
 import { ReactComponent as CloseIcon } from '../../assets/svg/cross.svg';
@@ -77,22 +79,25 @@ function CompactCard({ param, setExpanded }: CardType) {
 
 // Expanded Card
 function ExpandedCard({ param, setExpanded }: CardType) {
-  const data = {
+  type DataApexType = {
+    options: ApexCharts.ApexOptions;
+  };
+  const data: DataApexType = {
     options: {
       chart: {
         type: 'area',
         height: 'auto',
       },
 
-      dropShadow: {
-        enabled: false,
-        enabledOnSeries: undefined,
-        top: 0,
-        left: 0,
-        blur: 3,
-        color: '#000',
-        opacity: 0.35,
-      },
+      // dropShadow: {
+      //   enabled: false,
+      //   enabledOnSeries: undefined,
+      //   top: 0,
+      //   left: 0,
+      //   blur: 3,
+      //   color: '#000',
+      //   opacity: 0.35,
+      // },
 
       fill: {
         colors: ['#fff'],
@@ -140,7 +145,11 @@ function ExpandedCard({ param, setExpanded }: CardType) {
         </div>
         <span>{param.title}</span>
         <div className={styles.chartContainer}>
-          <Chart options={data.options} series={param.series} type="area" />
+          <ReactApexChart
+            options={data.options}
+            series={param.series}
+            // type="area"
+          />
         </div>
         <span>{param.term}</span>
       </div>
