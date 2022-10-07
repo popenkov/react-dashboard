@@ -15,6 +15,7 @@ import { ReactComponent as Settings } from '../../assets/svg/settings.svg';
 import { ReactComponent as Logout } from '../../assets/svg/logout.svg';
 import styles from './LeftSidebar.module.scss';
 import { typeImplementation } from '@testing-library/user-event/dist/type/typeImplementation';
+import useMediaQuery from '../../hooks/useMediaQuery';
 
 const iconsByAlias: any = {
   File: File,
@@ -24,6 +25,7 @@ const iconsByAlias: any = {
 };
 
 const LeftSidebar = () => {
+  const isAdaptive = useMediaQuery('(max-width: 992px)');
   const [selected, setSelected] = useState(0);
 
   const [expanded, setExpaned] = useState(true);
@@ -35,6 +37,10 @@ const LeftSidebar = () => {
     false: {
       left: '-60%',
     },
+  };
+
+  const handleCloseMenu = () => {
+    isAdaptive && setExpaned(false);
   };
 
   return (
@@ -65,7 +71,10 @@ const LeftSidebar = () => {
                     [styles.active]: selected === index,
                   })}
                   key={index}
-                  onClick={() => setSelected(index)}
+                  onClick={() => {
+                    setSelected(index);
+                    handleCloseMenu();
+                  }}
                 >
                   <Icon />
                   <span className={styles.text}>{item.heading}</span>
@@ -75,10 +84,10 @@ const LeftSidebar = () => {
           </nav>
 
           <div className={styles.settingsMenu}>
-            <div className={styles.menuItem}>
+            <Link to="/settings" className={styles.menuItem}>
               <Settings />
               <span className={styles.text}>Settings</span>
-            </div>
+            </Link>
             <div className={styles.menuItem}>
               <Logout />
               <span className={styles.text}>Login</span>
