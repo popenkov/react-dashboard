@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/react-dashboard/static/css/main.edf01b36.css",
+    "main.js": "/react-dashboard/static/js/main.cbf6b86e.js",
+    "static/media/profile.png": "/react-dashboard/static/media/profile.69cd10e2c012d62bffe4.png",
+    "static/media/logo.svg": "/react-dashboard/static/media/logo.82918fd36f3bac2a29225f150019a4ad.svg",
+    "static/media/bell.svg": "/react-dashboard/static/media/bell.06aa012f88318dd8913fa8414728a530.svg",
+    "static/media/signal.svg": "/react-dashboard/static/media/signal.c495d3e56786ee411312647c6c3356d5.svg",
+    "static/media/settings.svg": "/react-dashboard/static/media/settings.090239a6a7816223329b0ed73844c213.svg",
+    "static/media/grid.svg": "/react-dashboard/static/media/grid.3d294130859adf97a37a1ab5457b1432.svg",
+    "index.html": "/react-dashboard/index.html",
+    "static/media/message.svg": "/react-dashboard/static/media/message.9c34e21fbef5f5b9af32a694e3cf64e6.svg",
+    "static/media/wallet.svg": "/react-dashboard/static/media/wallet.f3aaa91aa7bf96a3b9154c80eca35e05.svg",
+    "static/media/file.svg": "/react-dashboard/static/media/file.8a9ca7f4716f10b273431fa6cdc0599a.svg",
+    "static/media/hamburger.svg": "/react-dashboard/static/media/hamburger.2f4f56f619f24397ac52f41e23f5e437.svg",
+    "static/media/logout.svg": "/react-dashboard/static/media/logout.034416bfb46d99da5c2f1ce960e71766.svg",
+    "static/media/search.svg": "/react-dashboard/static/media/search.ef1e7d38f416d4de762d57b92b430251.svg",
+    "static/media/cross.svg": "/react-dashboard/static/media/cross.fca950cee8f976d17c2b1dcf6f305182.svg",
+    "static/media/chevron-down.svg": "/react-dashboard/static/media/chevron-down.2c10c59b84571ba780965f6b4cc792bc.svg",
+    "main.edf01b36.css.map": "/react-dashboard/static/css/main.edf01b36.css.map",
+    "main.cbf6b86e.js.map": "/react-dashboard/static/js/main.cbf6b86e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.edf01b36.css",
+    "static/js/main.cbf6b86e.js"
+  ]
+}
